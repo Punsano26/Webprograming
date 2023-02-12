@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap'); 
+*{
+    font-family: 'East Sea Dokdo', cursive;
+    padding: 2px;
+    font-weight: 200;
+}
+body{
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/410/867/750/vector-forest-sunset-forest-sunset-forest-wallpaper-preview.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+div{
+    color: burlywood;
+    text-align: center;
+    padding: 10px;
+    min-width: 350px;
+    border: dashed 2px green;
+    border-bottom-style: dotted;
+    border-top-style: dashed;
+    border-left-style: solid;
+    border-bottom-width: 2px;
+    border-top-width: 5px;
+    border-left-color: black;
+}
+.happy{
+    background-color: lawngreen;
+    text-align: right;
+    border-radius: 25px;
+    border-bottom-left-radius: 20px;
+    border: solid 2px plum;
+}
+
+#love {
+
+    text-decoration: line-through;
+    background-color: rgb(205, 230, 67);
+}
+span {
+    margin: auto;
+    color: azure;
+}
+
+a:link{
+    color: red;
+    text-decoration: overline;
+}
+a:visited{
+    color: burlywood;
+    font-style: italic;
+}
+a:hover{
+    color: blueviolet;
+    font-size: x-large;  
+}
+a:active{
+    font-weight: 600px;
+
+}
