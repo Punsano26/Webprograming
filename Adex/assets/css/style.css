@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
 *{
-  font-family: 'Rubik Iso', cursive;
+  font-family: 'Edu NSW ACT Foundation', cursive;
 }
 /*-----------------------------------*\
   #main.css
@@ -473,6 +473,7 @@ body.nav.active{
 }
 .service-card{
   padding: 40px;
+  margin: 30px;
   box-shadow: var(--shadow-2);
   border-radius: var(--radius-6);
 }
@@ -489,7 +490,7 @@ body.nav.active{
   margin-inline: auto;
 }
 
-.service-card .card-icon .card-icon{
+.service-card .card-icon ion-icon{
   --ionicon-stroke-width:50px
 }
 
@@ -507,7 +508,8 @@ body.nav.active{
   font-weight: var(--fw-700);
   transition: var(--transition-1);
 }
-.service-card .btn-text:is(:hover, :focus-visible){opacity: 0.9;}
+.service-card .btn-text:is(:hover, :focus-visible)
+{opacity: 0.5;}
 
 
 
@@ -523,8 +525,8 @@ body.nav.active{
 .about .section-title{
   margin-block-end: 35px;
 }
-.accordian.card .card-title{
-  padding-inline-end: 20px;
+.accordian-card .card-title{
+  padding-block-end: 20px;
 }
 .accordian-btn{
   display: flex;
@@ -537,22 +539,27 @@ body.nav.active{
   transition: var(--transition-1);
   
 }
-.accordian-card.expanded .accor-btn ion icon{
+.accordian-card.expanded .accordian-btn ion-icon{
   transform: rotate(0.5turn);
 }
 
-.accordian-btn .span{transition: var(--transition-1);}
-.accordian-card.expanded .accor-btn .span {
+.accordian-btn .span{
+  transition: var(--transition-1);
+}
+
+.accordian-btn:is(:hover, :focus-visible)
+.span, .accordian-card.expanded .accordian-btn .span {
   color: var(--violet-blue-crayola);
 }
 .accordian-content{
   padding-inline-start: 24px;
-  max-width: 0;
+  max-height: 0;
   overflow: hidden;
 }
+
 .accordian-card.expanded .accordian-content{
   max-height: max-content;
-  padding-inline-start: 20px;
+  padding-block-start: 20px;
 }
 
 
@@ -598,14 +605,14 @@ body.nav.active{
 /*-----------------------------------*\
   #STATS
 \*-----------------------------------*/
-.stats{
+.stats {
   background-image: linear-gradient(to bottom, 
   var(--white) 50%, 
   var(--cultured) 50%
   );
 }
 
-.stats.card{
+.stats-card{
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
@@ -614,7 +621,7 @@ body.nav.active{
   border-radius: var(--radius-8);
 }
 
-.stats.card .card-text >*{
+.stats-card .card-text >*{
   color: var(--white);
 }
 
@@ -629,27 +636,34 @@ body.nav.active{
   text-align: center;
 }
 
-.project .section-title{margin-block-end: 50px;}
+.project .section-title {
+  margin-block-end: 50px;
+}
+
 .project-card{
   background-color: var(--white);
   border-radius: var(--radius-8);
   overflow: hidden;
   box-shadow: var(--shadow-2);
   height: 100%;
+  margin: 20px;
 }
 
-.project-card .accordian-content{
+.project-card .card-content{
   padding: 30px;
 }
 
-.project.card .card-title{
+.project-card .card-title{
   transition: var(--transition-1);
 }
-.project-card .card .card-title:is(hover, :focus-visible){
+.project-card .card-title:is(hover, :focus-visible) {
   color: var(--violet-blue-crayola);
 }
 
-.project-card .btn-text{margin-block: 16px 20px;}
+.project-card .card-text {
+  margin-block: 16px 20px;
+}
+
 .project-card .crad-meta-list{
   display: flex;
   flex-wrap: wrap;
@@ -673,12 +687,9 @@ body.nav.active{
 
 
 
-
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
-
-
 
 
 
@@ -741,46 +752,56 @@ body.nav.active{
    .feature-banner{order:1;}
 }
 
-@media(min-width:992){
-  .container{
+@media (min-width: 992px) {
+  .container {
     max-width: 960px;
   }
-  .nav-open-btn, .navbar>*:not(.nav-list),
-  .overlay{
+  .nav-open-btn,
+  .navbar > *:not(.navbar-list) {
     display: none;
   }
-  .navbar, .navbar.active{
-    all:unsent;
+  .navbar,
+  .navbar.active {
+    all: unset;
     display: block;
     margin-inline: auto 24px;
   }
-  .nav-list{
+  .navbar-list {
     display: flex;
     gap: 30px;
   }
-  .nav-link{
+
+  .navbar-link {
     color: var(--white);
     transition: var(--transition-1);
   }
 
-  .nav-link.btn:is(:hover, :focus-visible){opacity: 0.7;}
-  .header.active, .navbar-link{
-    color:var(--charcoal)
+  .navbar-link:is(:hover, :focus-visible) {
+    opacity: 0.7;
   }
-  .header.active, .navbar-link.btn:is(:hover, :focus-visible){
+  .header.active,
+  .navbar-link {
+    color: var(--white);
+  }
+  .header.active,
+  .navbar-link:is(:hover, :focus-visible) {
     opacity: 1;
     color: var(--violet-blue-crayola);
   }
-  .header .btn{
-    margin-block-start: 0;
+  .header .btn {
+    margin-inline: 0;
   }
-  .hero{
-    padding-inline-start: calc(var(--section-padding)+ 50px);
+
+  .hero {
+    padding-block-start: calc(var(--section-padding) + 50px);
     text-align: left;
   }
 
-  .hero .contaniner{
+  .hero .container {
     grid-template-columns: 1fr 0.8fr;
-    ali.
+    align-items: center;
+  }
+  .hero-content {
+    max-width: unset;
   }
 }
